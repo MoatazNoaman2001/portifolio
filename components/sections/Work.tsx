@@ -8,21 +8,21 @@ const projects = [
     {
     title: 'EasyDo CRM WhatsApp Integration',
     description: 'Comprehensive WhatsApp Business API platform with campaign management, template flow builders, and real-time analytics. Handling complex encryption and webhook systems.',
-    tech: ['Node.js', 'React', 'PostgreSQL', 'BullMQ'],
+    tech: ['Node.js', 'React', 'PostgreSQL', 'BullMQ', 'Typescript'],
     category: 'Backend & Full-Stack',
     gradient: 'from-teal-500/20 to-cyan-500/20',
   },
   {
     title: 'AlvoraCore Scheduling System',
     description: 'Advanced scheduling optimization system using Quarkus and Timefold. Solving complex resource allocation with AI-powered optimization algorithms.',
-    tech: ['Java', 'Quarkus', 'Timefold', 'PostgreSQL'],
+    tech: ['Java', 'Quarkus', 'Timefold', 'OSRM', 'Microservice', 'gRPC', 'PostgreSQL'],
     category: 'Backend Engineering',
     gradient: 'from-amber-500/20 to-yellow-500/20',
   },
   {
     title: 'PMP Certification Platform',
     description: 'Education platform serving 500+ users. Built comprehensive exam preparation system with progress tracking and analytics for PMP certification candidates.',
-    tech: ['Laravel', 'Vue.js', 'MySQL', 'Redis'],
+    tech: ['Laravel', 'Blade', 'PostgreSQL', 'SCSS'],
     category: 'Full-Stack Web',
     gradient: 'from-orange-500/20 to-red-500/20',
     github: 'https://github.com/MoatazNoaman2001/exam_system',
@@ -30,7 +30,7 @@ const projects = [
     {
     title: 'Tgaraar Platform',
     description: 'Education platform serving 500+ users. Built comprehensive exam preparation system with progress tracking and analytics for PMP certification candidates.',
-    tech: ['react' , 'node', 'typescript', 'mongo'],
+    tech: ['React' , 'Node', 'Typescript', 'MongoDb'],
     category: 'Full-Stack Web',
     gradient: 'from-orange-500/20 to-red-500/20',
   },
@@ -38,7 +38,7 @@ const projects = [
   {
     title: 'CVRP Route Optimization',
     description: 'Capacitated Vehicle Routing Problem solver using advanced optimization algorithms. Fleet management with optimal route planning and resource allocation.',
-    tech: ['Java', 'Quarkus', 'Timefold', 'PostgreSQL'],
+    tech: ['Java', 'Algorithms'],
     category: 'Optimization & AI',
     gradient: 'from-green-500/20 to-emerald-500/20',
     github: 'https://github.com/MoatazNoaman2001/cvrp',
@@ -46,7 +46,7 @@ const projects = [
   {
     title: 'UAV Route Optimization',
     description: 'Unmanned Aerial Vehicle route optimization system for efficient drone fleet management and delivery planning with constraint satisfaction.',
-    tech: ['Java', 'Timefold', 'Spring Boot', 'Algorithms'],
+    tech: ['Java','Algorithms'],
     category: 'Optimization & AI',
     gradient: 'from-purple-500/20 to-pink-500/20',
     github: 'https://github.com/MoatazNoaman2001/UAV-Route-Optemization',
@@ -54,7 +54,7 @@ const projects = [
     {
     title: 'Real-time Chat with WebRTC',
     description: 'Production-ready chat application with video calling capabilities. Built with WebRTC for peer-to-peer communication and real-time messaging.',
-    tech: ['Flutter', 'WebRTC', 'Firebase', 'Node.js'],
+    tech: ['Flutter','Bloc','Floor', 'Mobile&Desktop', 'WebRTC', 'Node.js', 'Mediasoup', 'SocketIO'],
     category: 'Mobile & Real-time',
     gradient: 'from-rose-500/20 to-pink-500/20',
   },
@@ -68,7 +68,7 @@ const projects = [
   {
     title: 'Vitalism - Graduation Project',
     description: 'Computer vision and machine learning application using OpenCV. Image processing, feature detection, and ML model integration for biomedical analysis.',
-    tech: ['Python', 'OpenCV', 'ML', 'TensorFlow'],
+    tech: ['Native Android', 'CPP', 'Ncnn','Python', 'OpenCV', 'ML', 'TensorFlow'],
     category: 'Computer Vision & ML',
     gradient: 'from-indigo-500/20 to-violet-500/20',
   },

@@ -51,9 +51,13 @@ export function Contact() {
     email: '',
     message: '',
   });
+  const [isSending, setIsSending] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Trigger fun animation
+    setIsSending(true);
+    setTimeout(() => setIsSending(false), 2000);
     // Handle form submission
     console.log('Form submitted:', formData);
   };
@@ -66,8 +70,8 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-32 px-6 overflow-hidden bg-[var(--surface)]/30">
-      <div className="max-w-7xl mx-auto">
+    <section id="contact" className="relative py-32 overflow-hidden bg-[var(--surface)]/30">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <Reveal>
           <div className="text-center mb-20">
@@ -86,7 +90,7 @@ export function Contact() {
           <Reveal direction="left">
             <motion.form
               onSubmit={handleSubmit}
-              className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-8"
+              className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6 sm:p-8"
               whileHover={{ scale: 1.01 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
@@ -141,12 +145,28 @@ export function Contact() {
                   />
                 </div>
 
-                <MagneticButton
-                  className="w-full px-6 py-4 bg-[var(--accent)] text-[var(--bg)] font-semibold rounded-full hover:shadow-2xl hover:shadow-[var(--accent)]/50 transition-all duration-300 flex items-center justify-center gap-2"
+                <motion.div
+                  animate={isSending ? {
+                    scale: [1, 0.95, 1.05, 1],
+                    rotate: [0, -5, 5, -5, 0],
+                  } : {}}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
                 >
-                  <Send className="w-5 h-5" />
-                  Send Message
-                </MagneticButton>
+                  <MagneticButton
+                    className="w-full px-6 py-4 bg-[var(--accent)] text-[var(--bg)] font-semibold rounded-full hover:shadow-2xl hover:shadow-[var(--accent)]/50 transition-all duration-300 flex items-center justify-center gap-2"
+                  >
+                    <motion.div
+                      animate={isSending ? {
+                        x: [0, 100, 100],
+                        opacity: [1, 1, 0],
+                      } : { x: 0, opacity: 1 }}
+                      transition={{ duration: 0.8, ease: "easeInOut" }}
+                    >
+                      <Send className="w-5 h-5" />
+                    </motion.div>
+                    {isSending ? 'Sending...' : 'Send Message'}
+                  </MagneticButton>
+                </motion.div>
               </div>
             </motion.form>
           </Reveal>
