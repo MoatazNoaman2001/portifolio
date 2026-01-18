@@ -14,7 +14,7 @@ export default function Home() {
   useSmoothScroll();
 
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen overflow-x-hidden w-full">
       <CustomCursor />
       <Navigation />
       <Hero />

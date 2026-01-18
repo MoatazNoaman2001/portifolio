@@ -63,7 +63,7 @@ export function ScrambleText({
     };
   }, [children, delay, duration]);
 
-  return <div ref={textRef} className={className}>{children}</div>;
+  return <div ref={textRef} className={className} style={{ maxWidth: '100%', wordBreak: 'break-word' }}>{children}</div>;
 }
 
 interface GsapRevealTextProps {
@@ -106,7 +106,7 @@ export function GsapRevealText({
   }, [delay, stagger]);
 
   return (
-    <div ref={textRef} className={className} style={{ perspective: '1000px' }}>
+    <div ref={textRef} className={`${className} flex flex-wrap justify-center`} style={{ perspective: '1000px', maxWidth: '100%' }}>
       {children.split('').map((char, index) => (
         <span
           key={index}
@@ -172,7 +172,7 @@ export function FloatingWords({
   }, [words]);
 
   return (
-    <div ref={containerRef} className={className}>
+    <div ref={containerRef} className={`${className} flex flex-wrap justify-center`} style={{ maxWidth: '100%' }}>
       {words.map((word, index) => (
         <span
           key={index}
@@ -226,17 +226,18 @@ export function TypewriterGsap({
   }, [text, delay, speed, cursor]);
 
   return (
-    <div className="inline-flex items-center">
+    <div className="flex items-center justify-center max-w-full overflow-hidden">
       <div
         ref={textRef}
         className={`overflow-hidden whitespace-nowrap ${className}`}
+        style={{ maxWidth: '100%' }}
       >
         {text}
       </div>
       {cursor && (
         <span
           ref={cursorRef}
-          className="inline-block w-0.5 h-[1em] bg-[var(--accent)] ml-1"
+          className="inline-block w-0.5 h-[1em] bg-[var(--accent)] ml-1 flex-shrink-0"
         />
       )}
     </div>

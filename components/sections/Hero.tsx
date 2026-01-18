@@ -16,7 +16,7 @@ import {
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg grid-bg bg-[var(--bg)]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-x-hidden overflow-y-hidden noise-bg grid-bg bg-[var(--bg)] w-full">
       {/* Gradient Orbs */}
       <motion.div
         className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--accent)]/20 rounded-full blur-3xl"
@@ -44,7 +44,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 text-center w-full">
         {/* Status Badge */}
         <Reveal delay={0.2}>
           <motion.div
@@ -60,22 +60,22 @@ export function Hero() {
         </Reveal>
 
         {/* Main Heading with GSAP Reveal Animation */}
-        <div className="mb-6">
+        <div className="mb-6 w-full overflow-hidden">
           <GsapRevealText
             delay={0.6}
             stagger={0.05}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight text-[var(--text)]"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight text-[var(--text)]"
           >
             Full-Stack Engineer
           </GsapRevealText>
         </div>
 
         {/* Subtitle with Scramble Effect */}
-        <div className="mb-4">
+        <div className="mb-4 w-full overflow-hidden px-2">
           <ScrambleText
             delay={2000}
             duration={3}
-            className="text-2xl md:text-4xl lg:text-5xl font-display font-bold gradient-text"
+            className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-display font-bold gradient-text break-words"
           >
             Open-Source Advocate | Backend Specialist
           </ScrambleText>
@@ -92,13 +92,13 @@ export function Hero() {
         </Reveal>
 
         {/* Description with Typewriter Effect */}
-        <div className="mb-12 min-h-[80px] flex items-center justify-center">
+        <div className="mb-12 min-h-[80px] flex items-center justify-center w-full overflow-hidden px-4">
           <TypewriterGsap
             text="Building scalable systems with modern web technologies. Passionate about open-source development and clean architecture."
             delay={5}
             speed={0.05}
             cursor={true}
-            className="text-lg md:text-xl text-[var(--muted)] max-w-2xl leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-[var(--muted)] max-w-2xl leading-relaxed"
           />
         </div>
 
