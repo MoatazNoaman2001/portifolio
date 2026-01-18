@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(npx tsc:*)",
+      "Bash(dir /s /b contexts componentsuiThemeToggle.tsx componentssectionsExperienceTimeline.tsx componentsanimationsParallaxSection.tsx)",
+      "Bash(timeout 20 npm run dev:*)",
+      "Bash(yarn --version)",
+      "Bash(node --version:*)",
+      "Bash(npm:*)",
+      "Bash(npx next build:*)",
+      "Bash(timeout 10 tail:*)"
+    ]
+  }
+}

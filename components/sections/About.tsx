@@ -5,48 +5,52 @@ import { motion } from 'framer-motion';
 import { Code2, Rocket, Users, Award } from 'lucide-react';
 
 const stats = [
-  { icon: Code2, label: 'Years Experience', value: '2+' },
-  { icon: Rocket, label: 'Projects Delivered', value: '15+' },
+  { icon: Code2, label: 'Years Experience', value: '4+' },
+  { icon: Rocket, label: 'Projects Delivered', value: '20+' },
   { icon: Users, label: 'Happy Clients', value: '500+' },
-  { icon: Award, label: 'Tech Stacks', value: '10+' },
+  { icon: Award, label: 'Tech Stacks', value: '15+' },
 ];
 
 const expertise = [
   {
     title: 'Backend Development',
-    description: 'Expert in Java Spring Boot, Quarkus, Node.js/NestJS, and Laravel. Building scalable APIs, microservices, and optimization systems.',
-    tags: ['Spring Boot', 'NestJS', 'Quarkus', 'Laravel'],
+    description: 'Java (2022-Present, 3+ years) with Spring Boot and Quarkus at Alvora. Node.js/NestJS (Jun 2024-Present) building real-time systems at EasyDo. Laravel (Mar-Sep 2024, 6m) for web APIs.',
+    tags: ['Java', 'Quarkus', 'NestJS', 'Spring Boot'],
+    highlight: 'Primary Focus',
+  },
+  {
+    title: 'Full-Stack Web',
+    description: 'PERN stack at EasyDo with NestJS backend and React frontend. PostgreSQL, Redis, BullMQ for scalable systems. Next.js, Angular, and modern web frameworks.',
+    tags: ['PERN', 'React', 'Next.js', 'PostgreSQL'],
+    highlight: 'Web Expert',
   },
   {
     title: 'Mobile Development',
-    description: '3.5 years Native Android, 1.5 years Flutter. Creating performant cross-platform apps with real-time features.',
-    tags: ['Flutter', 'Native Android', 'Firebase', 'WebRTC'],
+    description: 'Flutter (Jun 2024-May 2025) with real-time streaming and WebRTC. Built production apps with BLoC pattern and Provider. Android experience available.',
+    tags: ['Flutter', 'WebRTC', 'Real-time', 'Streaming'],
+    highlight: 'Available',
   },
   {
-    title: 'Frontend Engineering',
-    description: 'Modern web applications with React, Next.js, and Angular. Focus on performance, SEO, and exceptional UX.',
-    tags: ['React', 'Next.js', 'Angular', 'TypeScript'],
-  },
-  {
-    title: 'DevOps & Cloud',
-    description: 'Docker, Docker Swarm, CI/CD pipelines. Automated deployments and infrastructure management.',
-    tags: ['Docker', 'Git', 'CI/CD', 'PostgreSQL'],
+    title: 'DevOps & Tools',
+    description: 'Docker containerization, learning Minikube/K8s through ITI & DEPI. CI/CD pipelines, experience with Odoo. Strong Git workflow and open-source contribution.',
+    tags: ['Docker', 'Minikube', 'Odoo', 'CI/CD'],
+    highlight: 'Open-Source',
   },
 ];
 
 export function About() {
   return (
-    <section id="about" className="relative py-32 px-6 overflow-hidden">
+    <section id="about" className="relative py-32 px-6 overflow-hidden bg-[var(--bg)]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <Reveal>
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-[var(--text)]">
               About <span className="gradient-text">Me</span>
             </h2>
-            <p className="text-xl text-dark-muted max-w-2xl mx-auto">
-              Full-Stack Engineer passionate about building robust, scalable systems 
-              and delivering exceptional digital experiences.
+            <p className="text-xl text-[var(--muted)] max-w-2xl mx-auto">
+              Full-Stack Engineer specializing in backend systems, web applications,
+              and open-source development.
             </p>
           </div>
         </Reveal>
@@ -56,15 +60,15 @@ export function About() {
           {stats.map((stat, index) => (
             <Reveal key={stat.label} delay={index * 0.1}>
               <motion.div
-                className="bg-dark-surface border border-dark-border rounded-2xl p-6 text-center glow-box"
+                className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6 text-center glow-box"
                 whileHover={{ y: -5 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
-                <stat.icon className="w-8 h-8 mx-auto mb-4 text-accent-primary" />
+                <stat.icon className="w-8 h-8 mx-auto mb-4 text-[var(--accent)]" />
                 <div className="text-3xl md:text-4xl font-display font-bold gradient-text mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-dark-muted">{stat.label}</div>
+                <div className="text-sm text-[var(--muted)]">{stat.label}</div>
               </motion.div>
             </Reveal>
           ))}
@@ -75,20 +79,25 @@ export function About() {
           {expertise.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.1} direction="up">
               <motion.div
-                className="bg-dark-surface border border-dark-border rounded-2xl p-8 hover:border-accent-primary/50 transition-all duration-300"
+                className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-8 hover:border-[var(--accent)]/50 transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
               >
-                <h3 className="text-2xl font-display font-bold mb-4 text-dark-text">
-                  {item.title}
-                </h3>
-                <p className="text-dark-muted mb-6 leading-relaxed">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-2xl font-display font-bold text-[var(--text)]">
+                    {item.title}
+                  </h3>
+                  <span className="px-3 py-1 bg-[var(--accent)]/10 text-[var(--accent)] text-sm font-medium rounded-full">
+                    {item.highlight}
+                  </span>
+                </div>
+                <p className="text-[var(--muted)] mb-6 leading-relaxed text-sm">
                   {item.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-dark-elevated text-sm text-accent-primary border border-dark-border rounded-full"
+                      className="px-3 py-1 bg-[var(--elevated)] text-sm text-[var(--accent)] border border-[var(--border)] rounded-full"
                     >
                       {tag}
                     </span>
@@ -101,20 +110,20 @@ export function About() {
 
         {/* Personal Touch */}
         <Reveal delay={0.6}>
-          <div className="mt-20 bg-gradient-to-r from-accent-primary/10 to-accent-secondary/10 border border-accent-primary/20 rounded-2xl p-8 md:p-12">
+          <div className="mt-20 bg-gradient-to-r from-[var(--accent)]/10 to-[var(--accent-secondary)]/10 border border-[var(--accent)]/20 rounded-2xl p-8 md:p-12">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-1">
-                <h3 className="text-2xl md:text-3xl font-display font-bold mb-4">
+                <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 text-[var(--text)]">
                   Based in Cairo, Working Globally
                 </h3>
-                <p className="text-dark-muted leading-relaxed mb-6">
-                  Currently building AlvoraCore scheduling systems and WhatsApp Business 
-                  integrations. Teaching Assistant at Zewail University. Active freelancer 
-                  serving clients across Egypt, India, and beyond.
+                <p className="text-[var(--muted)] leading-relaxed mb-6">
+                  Currently building scheduling systems with Quarkus/Timefold at Alvora and
+                  WhatsApp Business integrations with NestJS at EasyDo. Teaching Assistant at
+                  Zewail University. Active freelancer and open-source contributor.
                 </p>
-                <p className="text-dark-muted leading-relaxed">
-                  I believe every project deserves intentional design, clean architecture, 
-                  and code that solves real problems. Let's build something exceptional together.
+                <p className="text-[var(--muted)] leading-relaxed">
+                  Passionate about clean architecture, scalable backend systems, and modern web
+                  development. Always exploring new technologies while mastering current stacks.
                 </p>
               </div>
             </div>

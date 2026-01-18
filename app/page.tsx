@@ -4,6 +4,7 @@ import { CustomCursor } from '@/components/animations/CustomCursor';
 import { Navigation } from '@/components/layout/Navigation';
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
+import { ExperienceTimeline } from '@/components/sections/ExperienceTimeline';
 import { Work } from '@/components/sections/Work';
 import { Skills } from '@/components/sections/Skills';
 import { Contact } from '@/components/sections/Contact';
@@ -18,6 +19,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <About />
+      <ExperienceTimeline />
       <Work />
       <Skills />
       <Contact />

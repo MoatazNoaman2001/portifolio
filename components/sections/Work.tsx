@@ -6,67 +6,81 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
-    title: 'EasyDo CRM WhatsApp Integration',
-    description: 'Comprehensive WhatsApp Business API platform with campaign management, template flow builders, and real-time analytics. Handling complex encryption, webhook systems, and multi-step forms.',
-    tech: ['Node.js', 'React', 'PostgreSQL', 'Redis', 'BullMQ'],
-    category: 'Backend & Full-Stack',
-    image: '/api/placeholder/600/400',
+    title: 'PMP Certification Platform',
+    description: 'Education platform serving 500+ users. Built comprehensive exam preparation system with progress tracking and analytics for PMP certification candidates.',
+    tech: ['Laravel', 'Vue.js', 'MySQL', 'Redis'],
+    category: 'Full-Stack Web',
+    gradient: 'from-orange-500/20 to-red-500/20',
+    stats: '500+ users',
+  },
+  {
+    title: 'Wessol Backend System',
+    description: 'High-performance backend serving 5,000+ daily users with 40% improved response times. RESTful APIs, caching strategies, and database optimization.',
+    tech: ['Node.js', 'NestJS', 'PostgreSQL', 'Redis'],
+    category: 'Backend Engineering',
     gradient: 'from-blue-500/20 to-cyan-500/20',
+    stats: '5,000+ daily users',
+  },
+  {
+    title: 'CVRP Route Optimization',
+    description: 'Capacitated Vehicle Routing Problem solver using advanced optimization algorithms. Fleet management with optimal route planning and resource allocation.',
+    tech: ['Java', 'Quarkus', 'Timefold', 'PostgreSQL'],
+    category: 'Optimization & AI',
+    gradient: 'from-green-500/20 to-emerald-500/20',
+    github: 'https://github.com/MoatazNoaman2001',
+  },
+  {
+    title: 'UAV Route Optimization',
+    description: 'Unmanned Aerial Vehicle route optimization system for efficient drone fleet management and delivery planning with constraint satisfaction.',
+    tech: ['Java', 'Timefold', 'Spring Boot', 'Algorithms'],
+    category: 'Optimization & AI',
+    gradient: 'from-purple-500/20 to-pink-500/20',
+    github: 'https://github.com/MoatazNoaman2001',
+  },
+  {
+    title: 'Vitalism - Graduation Project',
+    description: 'Computer vision and machine learning application using OpenCV. Image processing, feature detection, and ML model integration for biomedical analysis.',
+    tech: ['Python', 'OpenCV', 'ML', 'TensorFlow'],
+    category: 'Computer Vision & ML',
+    gradient: 'from-indigo-500/20 to-violet-500/20',
+    github: 'https://github.com/MoatazNoaman2001',
+  },
+  {
+    title: 'EasyDo CRM WhatsApp Integration',
+    description: 'Comprehensive WhatsApp Business API platform with campaign management, template flow builders, and real-time analytics. Handling complex encryption and webhook systems.',
+    tech: ['Node.js', 'React', 'PostgreSQL', 'BullMQ'],
+    category: 'Backend & Full-Stack',
+    gradient: 'from-teal-500/20 to-cyan-500/20',
   },
   {
     title: 'AlvoraCore Scheduling System',
     description: 'Advanced scheduling optimization system using Quarkus and Timefold. Solving complex resource allocation with AI-powered optimization algorithms.',
     tech: ['Java', 'Quarkus', 'Timefold', 'PostgreSQL'],
     category: 'Backend Engineering',
-    image: '/api/placeholder/600/400',
-    gradient: 'from-purple-500/20 to-pink-500/20',
+    gradient: 'from-amber-500/20 to-yellow-500/20',
   },
   {
-    title: 'AlvoraTrack GPS System',
-    description: 'Real-time vehicle tracking system with Traccar integration. Managing fleet operations with live location updates and comprehensive reporting.',
-    tech: ['Traccar', 'Node.js', 'PostgreSQL', 'WebSocket'],
-    category: 'IoT & Real-time',
-    image: '/api/placeholder/600/400',
-    gradient: 'from-green-500/20 to-emerald-500/20',
-  },
-  {
-    title: 'PMP Certification Platform',
-    description: 'Education platform serving 500+ users. Built comprehensive exam preparation system with progress tracking and analytics.',
-    tech: ['Laravel', 'Vue.js', 'MySQL', 'Redis'],
-    category: 'Full-Stack Web',
-    image: '/api/placeholder/600/400',
-    gradient: 'from-orange-500/20 to-red-500/20',
-  },
-{
     title: 'Real-time Chat with WebRTC',
     description: 'Production-ready chat application with video calling capabilities. Built with WebRTC for peer-to-peer communication and real-time messaging.',
     tech: ['Flutter', 'WebRTC', 'Firebase', 'Node.js'],
     category: 'Mobile & Real-time',
-    image: '/api/placeholder/600/400',
-    gradient: 'from-amber-500/20 to-yellow-500/20',
-  },
-  {
-    title: 'E-commerce with Tap Payments',
-    description: 'Full-featured e-commerce platform integrated with Tap payment gateway for Arab markets. Complete checkout flow and order management.',
-    tech: ['Node.js', 'React', 'PostgreSQL', 'Stripe'],
-    category: 'Full-Stack Web',
-    image: '/api/placeholder/600/400',
-    gradient: 'from-amber-500/20 to-yellow-500/20',
+    gradient: 'from-rose-500/20 to-pink-500/20',
+    github: 'https://github.com/MoatazNoaman2001',
   },
 ];
 
 export function Work() {
   return (
-    <section id="work" className="relative py-32 px-6 overflow-hidden bg-dark-surface/30">
+    <section id="work" className="relative py-32 px-6 overflow-hidden bg-[var(--surface)]/30">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <Reveal>
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-[var(--text)]">
               Featured <span className="gradient-text">Work</span>
             </h2>
-            <p className="text-xl text-dark-muted max-w-2xl mx-auto">
-              A selection of projects showcasing my expertise across backend, mobile, 
+            <p className="text-xl text-[var(--muted)] max-w-2xl mx-auto">
+              A selection of projects showcasing my expertise across backend, mobile,
               and full-stack development.
             </p>
           </div>
@@ -77,7 +91,7 @@ export function Work() {
           {projects.map((project, index) => (
             <Reveal key={project.title} delay={index * 0.1} direction="up">
               <motion.div
-                className="group relative bg-dark-surface border border-dark-border rounded-2xl overflow-hidden hover:border-accent-primary/50 transition-all duration-300"
+                className="group relative bg-[var(--surface)] border border-[var(--border)] rounded-2xl overflow-hidden hover:border-[var(--accent)]/50 transition-all duration-300"
                 whileHover={{ y: -8 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
@@ -89,8 +103,21 @@ export function Work() {
                     transition={{ duration: 0.3 }}
                   />
                   <div className="absolute top-4 right-4 flex gap-2">
+                    {project.github && (
+                      <motion.a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-[var(--surface)]/80 backdrop-blur-sm rounded-full hover:bg-[var(--accent)] transition-colors"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Github className="w-4 h-4" />
+                      </motion.a>
+                    )}
                     <motion.button
-                      className="p-2 bg-dark-surface/80 backdrop-blur-sm rounded-full hover:bg-accent-primary transition-colors"
+                      className="p-2 bg-[var(--surface)]/80 backdrop-blur-sm rounded-full hover:bg-[var(--accent)] transition-colors"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -102,30 +129,37 @@ export function Work() {
                       {project.title.charAt(0)}
                     </span>
                   </div>
+                  {project.stats && (
+                    <div className="absolute bottom-4 left-4">
+                      <span className="px-3 py-1 bg-[var(--bg)]/80 backdrop-blur-sm text-[var(--accent)] text-sm font-medium rounded-full">
+                        {project.stats}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Project Info */}
                 <div className="p-6">
-                  <div className="text-xs text-accent-primary font-semibold mb-2 uppercase tracking-wider">
+                  <div className="text-xs text-[var(--accent)] font-semibold mb-2 uppercase tracking-wider">
                     {project.category}
                   </div>
-                  <h3 className="text-xl font-display font-bold mb-3 group-hover:text-accent-primary transition-colors">
+                  <h3 className="text-xl font-display font-bold mb-3 group-hover:text-[var(--accent)] transition-colors text-[var(--text)]">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-dark-muted mb-4 line-clamp-3 leading-relaxed">
+                  <p className="text-sm text-[var(--muted)] mb-4 line-clamp-3 leading-relaxed">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-dark-elevated text-xs text-dark-muted rounded-md"
+                        className="px-2 py-1 bg-[var(--elevated)] text-xs text-[var(--muted)] rounded-md"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.tech.length > 3 && (
-                      <span className="px-2 py-1 bg-dark-elevated text-xs text-dark-muted rounded-md">
+                      <span className="px-2 py-1 bg-[var(--elevated)] text-xs text-[var(--muted)] rounded-md">
                         +{project.tech.length - 3}
                       </span>
                     )}
@@ -139,13 +173,17 @@ export function Work() {
         {/* View More */}
         <Reveal delay={0.6}>
           <div className="text-center mt-12">
-            <motion.button
-              className="px-8 py-4 bg-dark-elevated border border-dark-border text-dark-text font-semibold rounded-full hover:border-accent-primary hover:text-accent-primary transition-all duration-300"
+            <motion.a
+              href="https://github.com/MoatazNoaman2001"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--elevated)] border border-[var(--border)] text-[var(--text)] font-semibold rounded-full hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View All Projects
-            </motion.button>
+              <Github className="w-5 h-5" />
+              View All on GitHub
+            </motion.a>
           </div>
         </Reveal>
       </div>

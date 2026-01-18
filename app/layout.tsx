@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -9,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Moataz Hussein - Full-Stack Engineer',
-  description: 'Full-Stack Engineer specializing in Java Spring Boot, NestJS, Flutter, and modern web applications. 2+ years building scalable systems and exceptional digital experiences.',
+  title: 'Moataz Noaman - Full-Stack Engineer',
+  description: 'Full-Stack Engineer specializing in Node.js/NestJS, Java/Quarkus, and modern web applications. Open-source advocate with 4+ years building scalable backend systems.',
   keywords: [
     'Full-Stack Developer',
     'Backend Engineer',
@@ -22,17 +23,19 @@ export const metadata: Metadata = {
     'Next.js',
     'Cairo Egypt',
     'Freelance Developer',
+    'Native Android',
+    'Quarkus',
   ],
-  authors: [{ name: 'Moataz Hussein' }],
+  authors: [{ name: 'Moataz Noaman' }],
   openGraph: {
-    title: 'Moataz Hussein - Full-Stack Engineer',
+    title: 'Moataz Noaman - Full-Stack Engineer',
     description: 'Building scalable backend systems and exceptional digital experiences',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Moataz Hussein - Full-Stack Engineer',
+    title: 'Moataz Noaman - Full-Stack Engineer',
     description: 'Building scalable backend systems and exceptional digital experiences',
   },
   robots: {
@@ -47,15 +50,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
+    <html lang="en" className={`${inter.variable}`} suppressHydrationWarning>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme');
+                  if (!theme) {
+                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                  }
+                  document.documentElement.setAttribute('data-theme', theme);
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
       </head>
       <body className="font-body">
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
