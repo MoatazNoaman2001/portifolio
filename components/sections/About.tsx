@@ -6,15 +6,15 @@ import { Code2, Rocket, Users, Award } from 'lucide-react';
 
 const stats = [
   { icon: Code2, label: 'Years Experience', value: '4+' },
-  { icon: Rocket, label: 'Projects Delivered', value: '20+' },
-  { icon: Users, label: 'Happy Clients', value: '500+' },
+  { icon: Rocket, label: 'Projects Delivered', value: '10+' },
+  { icon: Users, label: 'Happy Clients', value: '100+' },
   { icon: Award, label: 'Tech Stacks', value: '15+' },
 ];
 
 const expertise = [
   {
     title: 'Backend Development',
-    description: 'Java (2022-Present, 3+ years) with Spring Boot and Quarkus at Alvora. Node.js/NestJS (Jun 2024-Present) building real-time systems at EasyDo. Laravel (Mar-Sep 2024, 6m) for web APIs.',
+    description: 'Java (2022-Present, 3+ years) with Spring Boot and Quarkus at Alvora. Node.js (Jun 2024-Present) building real-time systems at EasyDo. Laravel (Mar-Sep 2024, 6m)',
     tags: ['Java', 'Quarkus', 'NestJS', 'Spring Boot'],
     highlight: 'Primary Focus',
   },

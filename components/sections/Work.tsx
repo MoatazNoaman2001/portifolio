@@ -5,47 +5,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
-  {
-    title: 'PMP Certification Platform',
-    description: 'Education platform serving 500+ users. Built comprehensive exam preparation system with progress tracking and analytics for PMP certification candidates.',
-    tech: ['Laravel', 'Vue.js', 'MySQL', 'Redis'],
-    category: 'Full-Stack Web',
-    gradient: 'from-orange-500/20 to-red-500/20',
-    stats: '500+ users',
-  },
-  {
-    title: 'Wessol Backend System',
-    description: 'High-performance backend serving 5,000+ daily users with 40% improved response times. RESTful APIs, caching strategies, and database optimization.',
-    tech: ['Node.js', 'NestJS', 'PostgreSQL', 'Redis'],
-    category: 'Backend Engineering',
-    gradient: 'from-blue-500/20 to-cyan-500/20',
-    stats: '5,000+ daily users',
-  },
-  {
-    title: 'CVRP Route Optimization',
-    description: 'Capacitated Vehicle Routing Problem solver using advanced optimization algorithms. Fleet management with optimal route planning and resource allocation.',
-    tech: ['Java', 'Quarkus', 'Timefold', 'PostgreSQL'],
-    category: 'Optimization & AI',
-    gradient: 'from-green-500/20 to-emerald-500/20',
-    github: 'https://github.com/MoatazNoaman2001',
-  },
-  {
-    title: 'UAV Route Optimization',
-    description: 'Unmanned Aerial Vehicle route optimization system for efficient drone fleet management and delivery planning with constraint satisfaction.',
-    tech: ['Java', 'Timefold', 'Spring Boot', 'Algorithms'],
-    category: 'Optimization & AI',
-    gradient: 'from-purple-500/20 to-pink-500/20',
-    github: 'https://github.com/MoatazNoaman2001',
-  },
-  {
-    title: 'Vitalism - Graduation Project',
-    description: 'Computer vision and machine learning application using OpenCV. Image processing, feature detection, and ML model integration for biomedical analysis.',
-    tech: ['Python', 'OpenCV', 'ML', 'TensorFlow'],
-    category: 'Computer Vision & ML',
-    gradient: 'from-indigo-500/20 to-violet-500/20',
-    github: 'https://github.com/MoatazNoaman2001',
-  },
-  {
+    {
     title: 'EasyDo CRM WhatsApp Integration',
     description: 'Comprehensive WhatsApp Business API platform with campaign management, template flow builders, and real-time analytics. Handling complex encryption and webhook systems.',
     tech: ['Node.js', 'React', 'PostgreSQL', 'BullMQ'],
@@ -60,12 +20,57 @@ const projects = [
     gradient: 'from-amber-500/20 to-yellow-500/20',
   },
   {
+    title: 'PMP Certification Platform',
+    description: 'Education platform serving 500+ users. Built comprehensive exam preparation system with progress tracking and analytics for PMP certification candidates.',
+    tech: ['Laravel', 'Vue.js', 'MySQL', 'Redis'],
+    category: 'Full-Stack Web',
+    gradient: 'from-orange-500/20 to-red-500/20',
+    github: 'https://github.com/MoatazNoaman2001/exam_system',
+  },
+    {
+    title: 'Tgaraar Platform',
+    description: 'Education platform serving 500+ users. Built comprehensive exam preparation system with progress tracking and analytics for PMP certification candidates.',
+    tech: ['react' , 'node', 'typescript', 'mongo'],
+    category: 'Full-Stack Web',
+    gradient: 'from-orange-500/20 to-red-500/20',
+  },
+ 
+  {
+    title: 'CVRP Route Optimization',
+    description: 'Capacitated Vehicle Routing Problem solver using advanced optimization algorithms. Fleet management with optimal route planning and resource allocation.',
+    tech: ['Java', 'Quarkus', 'Timefold', 'PostgreSQL'],
+    category: 'Optimization & AI',
+    gradient: 'from-green-500/20 to-emerald-500/20',
+    github: 'https://github.com/MoatazNoaman2001/cvrp',
+  },
+  {
+    title: 'UAV Route Optimization',
+    description: 'Unmanned Aerial Vehicle route optimization system for efficient drone fleet management and delivery planning with constraint satisfaction.',
+    tech: ['Java', 'Timefold', 'Spring Boot', 'Algorithms'],
+    category: 'Optimization & AI',
+    gradient: 'from-purple-500/20 to-pink-500/20',
+    github: 'https://github.com/MoatazNoaman2001/UAV-Route-Optemization',
+  },
+    {
     title: 'Real-time Chat with WebRTC',
     description: 'Production-ready chat application with video calling capabilities. Built with WebRTC for peer-to-peer communication and real-time messaging.',
     tech: ['Flutter', 'WebRTC', 'Firebase', 'Node.js'],
     category: 'Mobile & Real-time',
     gradient: 'from-rose-500/20 to-pink-500/20',
-    github: 'https://github.com/MoatazNoaman2001',
+  },
+    {
+    title: 'Norway voice application',
+    description: 'Audio and Video streaming application for streaming Norway news and deliver latest articles and blogs.',
+    tech: ['Flutter'],
+    category: 'Mobile',
+    gradient: 'from-rose-500/20 to-pink-500/20',
+  },
+  {
+    title: 'Vitalism - Graduation Project',
+    description: 'Computer vision and machine learning application using OpenCV. Image processing, feature detection, and ML model integration for biomedical analysis.',
+    tech: ['Python', 'OpenCV', 'ML', 'TensorFlow'],
+    category: 'Computer Vision & ML',
+    gradient: 'from-indigo-500/20 to-violet-500/20',
   },
 ];
 
@@ -129,13 +134,6 @@ export function Work() {
                       {project.title.charAt(0)}
                     </span>
                   </div>
-                  {project.stats && (
-                    <div className="absolute bottom-4 left-4">
-                      <span className="px-3 py-1 bg-[var(--bg)]/80 backdrop-blur-sm text-[var(--accent)] text-sm font-medium rounded-full">
-                        {project.stats}
-                      </span>
-                    </div>
-                  )}
                 </div>
 
                 {/* Project Info */}

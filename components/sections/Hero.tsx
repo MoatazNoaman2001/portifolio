@@ -64,7 +64,7 @@ export function Hero() {
           <GsapRevealText
             delay={0.6}
             stagger={0.05}
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight text-[var(--text)]"
+            className="text-3xl sm:text-2xl md:text-7xl lg:text-8xl font-display font-bold leading-tight text-[var(--text)]"
           >
             Full-Stack Engineer
           </GsapRevealText>
