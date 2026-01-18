@@ -175,7 +175,9 @@ export function HorizontalScroll({
 
   return (
     <div ref={ref} className={`relative overflow-hidden ${className}`}>
-      <motion.div style={{ x }} className="flex" style={{ width: scrollWidth }}>
+      <motion.div style={{ x 
+        
+        ,width: scrollWidth }}>
         {children}
       </motion.div>
     </div>
