@@ -14,14 +14,14 @@ const stats = [
 const expertise = [
   {
     title: 'Backend Development',
-    description: 'Java (2022-Present, 3+ years) with Spring Boot and Quarkus at Alvora. Node.js (Jun 2024-Present) building real-time systems at EasyDo. Laravel (Mar-Sep 2024, 6m)',
-    tags: ['Java', 'Quarkus', 'NestJS', 'Spring Boot'],
+    description: 'Java (2023-Present, 3+ years) with Spring Boot and Quarkus at Alvora (July 2025). Node.js (Jun 2024-Present) building real-time systems at EasyDo. Laravel (Mar-Sep 2025, 6m)',
+    tags: ['Quarkus', 'NestJS', 'Spring Boot', 'NODE', 'Laravel'],
     highlight: 'Primary Focus',
   },
   {
     title: 'Full-Stack Web',
-    description: 'PERN stack at EasyDo with NestJS backend and React frontend. PostgreSQL, Redis, BullMQ for scalable systems. Next.js, Angular, and modern web frameworks.',
-    tags: ['PERN', 'React', 'Next.js', 'PostgreSQL'],
+    description: 'PERN stack at Liberty Infospace with NestJS backend and React frontend. PostgreSQL, Redis, BullMQ for scalable systems. Next.js, Angular, and modern web frameworks.',
+    tags: ['PERN', 'React', 'NODE.js', 'PostgreSQL', 'Redis', 'BullMQ'],
     highlight: 'Web Expert',
   },
   {
@@ -118,7 +118,7 @@ export function About() {
                 </h3>
                 <p className="text-[var(--muted)] leading-relaxed mb-6">
                   Currently building scheduling systems with Quarkus/Timefold at Alvora and
-                  WhatsApp Business integrations with NestJS at EasyDo. Teaching Assistant at
+                  WhatsApp Business integrations with NODEJS at EasyDo. Teaching Assistant at
                   Zewail University. Active freelancer and open-source contributor.
                 </p>
                 <p className="text-[var(--muted)] leading-relaxed">

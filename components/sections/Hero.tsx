@@ -237,7 +237,7 @@ export function Hero() {
 
         {/* Subtitle */}
         <KineticSplitText
-  text="Open-Source Advocate | Backend Specialist"
+  text="Open-Source Developer | Backend Specialist"
   className="mt-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-display font-bold gradient-text break-words"
   strength={18}
   speed={1.3}

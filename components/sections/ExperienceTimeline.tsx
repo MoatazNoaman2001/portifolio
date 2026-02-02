@@ -26,7 +26,7 @@ const timeline: TimelineItem[] = [
     type: 'education',
   },
   {
-    year: '2022-Present',
+    year: '2023-Present',
     title: 'Java Development',
     subtitle: '3+ Years Backend',
     description: 'Deep expertise in Java ecosystem. From Spring Boot to Quarkus, building microservices and enterprise applications.',
@@ -34,7 +34,7 @@ const timeline: TimelineItem[] = [
     type: 'skill',
   },
   {
-    year: 'Feb-Mar 2023',
+    year: 'Feb-Mar 2024',
     title: 'Teaching Assistant',
     subtitle: 'Zewail University',
     description: 'Post-graduation role teaching programming concepts and assisting students with software development fundamentals.',
@@ -42,7 +42,7 @@ const timeline: TimelineItem[] = [
     type: 'work',
   },
   {
-    year: 'Mar-Sep 2024',
+    year: 'Mar-Sep 2025',
     title: 'Laravel Backend',
     subtitle: '6 Months Web Development',
     description: 'Developed backend systems with Laravel. Built RESTful APIs, database design, and server-side logic for web applications.',
@@ -50,7 +50,7 @@ const timeline: TimelineItem[] = [
     type: 'skill',
   },
   {
-    year: 'Jun 2024-Present',
+    year: 'Sep 2024-Present',
     title: 'Node.js/NestJS Engineer',
     subtitle: 'EasyDo (Current)',
     description: 'Building scalable backend systems with NestJS. PERN stack development, WhatsApp Business API integration, real-time features with WebSocket and BullMQ.',
@@ -66,15 +66,15 @@ const timeline: TimelineItem[] = [
     type: 'skill',
   },
   {
-    year: '2024',
+    year: '2024/2025',
     title: 'Open-Source Training',
     subtitle: 'ITI & DEPI Programs',
     description: 'Advanced training in open-source technologies and DevOps. Focus on Docker, Kubernetes, CI/CD pipelines, and cloud infrastructure.',
-    tech: ['Docker', 'Minikube', 'CI/CD', 'Open-Source'],
+    tech: ['MySQL', 'Linux 1&2', 'PHP','JAVA','React/NEXTJS' , 'Angular', 'NODE/NESTJS', 'Laravel'],
     type: 'education',
   },
   {
-    year: '2024-Present',
+    year: 'July/2025-Present',
     title: 'Java/Quarkus Engineer',
     subtitle: 'Alvora (Current)',
     description: 'Building scheduling optimization systems with Quarkus and Timefold. Microservices architecture, constraint solving, and performance optimization.',
@@ -353,7 +353,7 @@ export function ExperienceTimeline() {
             >
               <Award className="w-8 h-8 text-[var(--accent)]" />
               <div className="text-left">
-                <div className="text-3xl font-display font-bold gradient-text">4+ Years</div>
+                <div className="text-3xl font-display font-bold gradient-text">3+ Years</div>
                 <div className="text-sm text-[var(--muted)]">of Professional Journey</div>
               </div>
             </motion.div>
