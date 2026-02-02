@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Code2, Rocket, Users, Award } from 'lucide-react';
 
 const stats = [
-  { icon: Code2, label: 'Years Experience', value: '4+' },
+  { icon: Code2, label: 'Years Experience', value: '3+' },
   { icon: Rocket, label: 'Projects Delivered', value: '10+' },
   { icon: Users, label: 'Happy Clients', value: '100+' },
   { icon: Award, label: 'Tech Stacks', value: '15+' },
