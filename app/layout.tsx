@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Moataz Noaman - Full-Stack Engineer',
-  description: 'Full-Stack Engineer specializing in Node.js/NestJS, Java/Quarkus, and modern web applications. Open-source advocate with 4+ years building scalable backend systems.',
+  description: 'Full-Stack Engineer specializing in Node.js/NestJS, Java/Quarkus, and modern web applications. Open-source advocate with 3+ years building scalable backend systems.',
   keywords: [
     'Full-Stack Developer',
     'Backend Engineer',

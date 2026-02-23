@@ -21,6 +21,7 @@ const skillCategories = [
       { name: 'Redis/BullMQ', level: 85 },
       { name: 'MySQL', level: 82 },
       { name: 'TypeORM/Prisma', level: 88 },
+      { name: 'MongoDB', level: 75 },
     ],
   },
   {
@@ -40,6 +41,7 @@ const skillCategories = [
       { name: 'Flutter (Available)', level: 80 },
       { name: 'Native Android (Available)', level: 76 },
       { name: 'Minikube/K8s', level: 65 },
+      { name: 'AWS', level: 70 },
     ],
   },
 ];
@@ -89,7 +91,7 @@ export function Skills() {
           {skillCategories.map((category, categoryIndex) => (
             <Reveal key={category.name} delay={categoryIndex * 0.1} direction="up">
               <motion.div
-                className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-8"
+                className="glass border border-white/[0.08] rounded-2xl p-8"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
@@ -135,6 +137,8 @@ export function Skills() {
                 'Nginx',
                 'Linux',
                 'Open-Source',
+                'Vue.js',
+                'MongoDB',
                 'Clean Architecture',
               ].map((tech, index) => (
                 <motion.span

@@ -28,7 +28,7 @@ const timeline: TimelineItem[] = [
   {
     year: '2023-Present',
     title: 'Java Development',
-    subtitle: '3+ Years Backend',
+    subtitle: '2+ Years Backend',
     description: 'Deep expertise in Java ecosystem. From Spring Boot to Quarkus, building microservices and enterprise applications.',
     tech: ['Java', 'Spring Boot', 'Quarkus', 'Microservices'],
     type: 'skill',

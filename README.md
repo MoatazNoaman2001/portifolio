@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Moataz Noaman - Portfolio
+
+Personal portfolio website for **Moataz Noaman**, a Full-Stack Engineer based in Cairo, Egypt. Specializing in backend development with Node.js/NestJS, Java/Quarkus, and modern web technologies.
+
+## About Me
+
+I'm a backend-focused full-stack engineer with 3+ years of experience building scalable systems. Currently working on scheduling optimization with Quarkus/Timefold at Alvora and WhatsApp Business integrations with NestJS at EasyDo. Open-source advocate with 74+ repositories on GitHub.
+
+**Core Stack:** Node.js, Java, Quarkus, Spring Boot, NestJS, React, Next.js, TypeScript, PostgreSQL, Docker
+
+## Tech Stack
+
+- **Framework:** Next.js 16 + React 19
+- **Styling:** Tailwind CSS 4 with glassmorphism effects
+- **Animations:** Framer Motion + GSAP
+- **Smooth Scroll:** Lenis
+- **Contact:** EmailJS integration
+- **Deployment:** Vercel-ready
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### EmailJS Setup (Optional)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.local.example` to `.env.local` and fill in your EmailJS credentials to enable the contact form.
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Bento grid About section with live Cairo clock and animated counters
+- Scroll-velocity marquee with tech stack keywords
+- Glassmorphic UI with dark/light theme support
+- Interactive contact form with EmailJS, copy-to-clipboard email, and WhatsApp link
+- Scroll progress indicator and text scramble animations
+- GSAP-powered hero with kinetic text and parallax orbs
+- Fully responsive with Material 3 mobile navigation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Connect
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **GitHub:** [MoatazNoaman2001](https://github.com/MoatazNoaman2001)
+- **LinkedIn:** [moataz-noaman](https://linkedin.com/in/moataz-noaman-02196222a)
+- **Email:** moataz.noaman12@gmail.com

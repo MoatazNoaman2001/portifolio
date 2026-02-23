@@ -69,7 +69,7 @@ export function Navigation() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 hidden md:block ${
-          scrolled ? 'bg-[var(--surface)]/80 backdrop-blur-xl border-b border-[var(--border)]' : ''
+          scrolled ? 'glass border-b border-[var(--border)]' : ''
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">

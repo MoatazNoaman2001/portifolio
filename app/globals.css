@@ -270,6 +270,24 @@ body {
   pointer-events: none;
 }
 
+/* Glassmorphism utilities */
+.glass {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background-color: color-mix(in srgb, var(--surface) 60%, transparent);
+}
+
+[data-theme="light"] .glass {
+  background-color: color-mix(in srgb, var(--surface) 70%, transparent);
+}
+
+.glass-glow {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background-color: color-mix(in srgb, var(--surface) 60%, transparent);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
 /* Animation delays */
 .animate-delay-100 {
   animation-delay: 100ms;
